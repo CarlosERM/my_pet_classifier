@@ -5,7 +5,7 @@
   "source": "/src/index.html",
   "scripts": {
     "start": "parcel",
-    "predeploy": "rm -rf dist && parcel build index.html --public-url YOUR_REPO_NAME",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url /my_pet_classifier",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
