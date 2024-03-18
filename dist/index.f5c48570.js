@@ -598,6 +598,7 @@ function addTitle(title) {
 }
 async function makePrediction(fl) {
     try {
+        loadingSpinner();
         let reader = new FileReader();
         reader.onloadend = async function() {
             const app = await (0, _client.client)("airvit2/pet_classifier");
@@ -605,11 +606,26 @@ async function makePrediction(fl) {
                 reader.result
             ]);
             addTitle(result.data[0].label);
+            loadingSpinner();
         };
         reader.readAsDataURL(fl);
     } catch (error) {
         console.log("An error occurred during prediction");
         console.error(error);
+    }
+}
+function loadingSpinner() {
+    const loading = document.getElementById("loading-spinner");
+    const petBreed = document.getElementById("pet_breed");
+    const form = document.getElementById("my-form");
+    if (loading.classList.contains("hidden")) {
+        loading.classList.remove("hidden");
+        petBreed.classList.add("hidden");
+        form.classList.add("hidden");
+    } else {
+        loading.classList.add("hidden");
+        petBreed.classList.remove("hidden");
+        form.classList.remove("hidden");
     }
 }
 function addImage(fl) {
