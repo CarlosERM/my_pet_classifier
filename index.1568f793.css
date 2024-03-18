@@ -321,12 +321,40 @@ img, video {
   width: 3rem;
 }
 
+.w-3 {
+  width: .75rem;
+}
+
 .w-40 {
   width: 10rem;
 }
 
 .w-96 {
   width: 24rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.max-w-96 {
+  max-width: 24rem;
 }
 
 .grow {
@@ -555,5 +583,23 @@ img, video {
 .group:hover .group-hover\:text-c2 {
   --tw-text-opacity: 1;
   color: rgb(255 178 96 / var(--tw-text-opacity));
+}
+
+@media (width >= 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:w-96 {
+    width: 24rem;
+  }
+
+  .sm\:max-w-96 {
+    max-width: 24rem;
+  }
 }
 /*# sourceMappingURL=index.1568f793.css.map */

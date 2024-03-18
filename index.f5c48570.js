@@ -597,6 +597,7 @@ function addTitle(title) {
     h2_title.innerHTML = title;
 }
 async function makePrediction(fl) {
+    if (!fl) return;
     try {
         loadingSpinner();
         let reader = new FileReader();
