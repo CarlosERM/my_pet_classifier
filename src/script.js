@@ -9,11 +9,12 @@ const upload_image = document.getElementById("upload_image");
 const upload_title = document.getElementById("upload_title");
 let file;
 
-async function makePrediction(file) {
+async function makePrediction(fl) {
   try {
     const app = await client("airvit2/pet_classifier");
-    const result = await app.predict("/predict", [file]);
+    const result = await app.predict("/predict", [fl]);
     console.log("Prediction successful");
+
     console.log(result.data);
   } catch (error) {
     console.log("An error occurred during prediction");

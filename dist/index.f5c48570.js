@@ -592,11 +592,11 @@ const image_zone = document.getElementById("drop_zone");
 const upload_image = document.getElementById("upload_image");
 const upload_title = document.getElementById("upload_title");
 let file;
-async function makePrediction(file) {
+async function makePrediction(fl) {
     try {
         const app = await (0, _client.client)("airvit2/pet_classifier");
         const result = await app.predict("/predict", [
-            file
+            fl
         ]);
         console.log("Prediction successful");
         console.log(result.data);
