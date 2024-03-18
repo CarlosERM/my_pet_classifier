@@ -1,1 +1,47 @@
-<!DOCTYPE html><html lang="en" class="h-full"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PetClassifier</title><link href="index.fcfc32dd.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><script src="index.f2ad3f5c.js" type="module"></script></head><body class="flex flex-col h-full"> <header> <nav class="flex justify-between p-8"> <a class="inline-block" href="#"> <img src="pet_classifier.ce7cbae2.jpg" alt="Pet Classifier"> </a> <div class="flex gap-4"> <a href> <img src="kaggle.bdda8a7b.svg"> </a> <a href> <img src="github.11b89b34.svg"> </a> <a href> <img src="linkedin.2f02b101.svg"> </a> </div> </nav> </header> <main class="flex grow justify-center relative"> <form class="flex flex-col h-fit w-96 z-10"> <input id="input_photo" type="file" name="img" accept="image/*" hidden> <div class="bg-c3 bg-opacity-95 cursor-pointer drop-shadow-lg ease-in-out flex flex-col group h-96 hover:drop-shadow-2xl hover:mb-2 hover:outline-offset-8 justify-center outline-4 outline-c2 outline-dashed rounded-xl transition-all" id="drop_zone"> <img id="upload_image" class="align-center group-hover:-translate-y-1.5 group/photo:hidden self-center transition-all w-40" src="upload.0908b479.svg"> <h2 id="upload_title" class="font-bold font-poppins group-hover:text-c2 group-hover:text-xl group/photo:hidden text-c4 text-center text-lg transition-all"> Upload a Petcture </h2> </div> <input id="predict-button" class="bg-c1 cursor-pointer font-poppins font-semibold hover:-translate-y-1 hover:bg-[#FFA52B] hover:shadow-lg mt-5 px-20 py-3 rounded-2xl shadow-md text-2xl text-white transition-all" type="submit" value="Predict"> </form> <img class="absolute bottom-0 left-0 w-96" src="dog1.dc4a133d.svg"> <img class="absolute bottom-0 right-0" src="dog2.2108ec4a.svg"> </main> </body></html>
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetClassifier</title>
+    <link href="/index.1568f793.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="/index.f5c48570.js" defer=""></script>
+  </head>
+  <body class="h-full flex flex-col">
+    <header>
+      <nav class="p-8 flex justify-between">
+        <a class="inline-block" href="#">
+          <img src="/pet_classifier.516a31e6.jpg" alt="Pet Classifier">
+        </a>
+        <div class="flex gap-4">
+          <a href="">
+            <img src="/kaggle.8eeeea80.svg">
+          </a>
+          <a href="">
+            <img src="/github.ea335e20.svg">
+          </a>
+          <a href="">
+            <img src="/linkedin.47ae2b4b.svg">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="relative grow flex justify-center">
+      <form class="w-96 flex flex-col h-fit z-10">
+        <input id="input_photo" type="file" name="img" accept="image/*" hidden="">
+        <div class="group transition-all cursor-pointer ease-in-out outline-dashed outline-4 outline-c2 flex flex-col bg-c3 rounded-xl h-96 justify-center drop-shadow-lg hover:drop-shadow-2xl hover:outline-offset-8 hover:mb-2 bg-opacity-95" id="drop_zone">
+          <img id="upload_image" class="group/photo:hidden transition-all w-40 self-center align-center group-hover:-translate-y-1.5" src="/upload.be8f3e05.svg">
+          <h2 id="upload_title" class="group/photo:hidden transition-all text-center font-poppins font-bold text-lg text-c4 group-hover:text-c2 group-hover:text-xl">
+            Upload a Petcture
+          </h2>
+        </div>
+        <input id="predict-button" class="transition-all shadow-md cursor-pointer text-white text-2xl mt-5 py-3 px-20 font-poppins font-semibold bg-c1 hover:bg-[#FFA52B] hover:shadow-lg rounded-2xl hover:-translate-y-1" type="submit" value="Predict">
+      </form>
+      <img class="absolute bottom-0 left-0 w-96" src="/dog1.f33facf0.svg">
+      <img class="absolute bottom-0 right-0" src="/dog2.074a214c.svg">
+    </main>
+  </body>
+</html>
