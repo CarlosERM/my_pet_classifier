@@ -1,1 +1,55 @@
-<!DOCTYPE html><html lang="en" class="h-full"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PetClassifier</title><link href="index.b6b9b919.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><script src="index.c24aa91f.js" type="module"></script></head><body class="flex flex-col h-full"> <header> <nav class="flex justify-between pb-2 pt-8 px-8"> <a class="inline-block" href="#"> <img src="pet_classifier.ce7cbae2.jpg" alt="Pet Classifier"> </a> <div class="align-center gap-4 hidden sm:flex"> <a class="self-center w-16" href> <img src="kaggle.bdda8a7b.svg"> </a> <a class="self-center" href> <img src="github.11b89b34.svg"> </a> <a class="self-center" href> <img src="linkedin.2f02b101.svg"> </a> </div> </nav> </header> <main class="align-center flex flex-col grow relative"> <div id="loading-spinner" class="flex h-full hidden self-center"> <svg width="24" height="24" fill="none" class="animate-spin h-12 mb-32 self-center text-gray-300 w-12" viewBox="0 0 64 64"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M32 3a29 29 0 1 1 0 58 29 29 0 0 1 0-58"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M32 3a29 29 0 0 1 27.576 37.976" class="text-c1"/></svg> </div> <h2 id="pet_breed" class="font-semibold hidden text-4xl text-c1 text-center"></h2> <form id="my-form" class="flex flex-col h-fit max-w-96 mt-4 self-center sm:w-96 w-80 z-10"> <input id="input_photo" type="file" name="img" accept="image/*" hidden> <div class="bg-c3 bg-opacity-95 cursor-pointer drop-shadow-lg ease-in-out flex flex-col group h-96 hover:drop-shadow-2xl hover:mb-2 hover:outline-offset-8 justify-center outline-4 outline-c2 outline-dashed rounded-xl transition-all" id="drop_zone"> <img id="upload_image" class="align-center group-hover:-translate-y-1.5 group/photo:hidden self-center transition-all w-40" src="upload.0908b479.svg"> <h2 id="upload_title" class="font-bold font-poppins group-hover:text-c2 group-hover:text-xl group/photo:hidden text-c4 text-center text-lg transition-all"> Upload a Petcture </h2> </div> <input id="predict-button" class="bg-c1 cursor-pointer font-poppins font-semibold hover:-translate-y-1 hover:bg-[#FFA52B] hover:shadow-lg mt-5 px-20 py-3 rounded-2xl shadow-md text-2xl text-white transition-all" type="submit" value="Predict"> </form> <img class="absolute bottom-0 left-0 w-96" src="dog1.dc4a133d.svg"> <img class="absolute bottom-0 right-0" src="dog2.2108ec4a.svg"> </main> </body></html>
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetClassifier</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.956925d8.ico">
+    <link href="/index.1568f793.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="/index.f5c48570.js" defer=""></script>
+  </head>
+  <body class="h-full flex flex-col">
+    <header>
+      <nav class="px-8 pt-8 pb-2 flex justify-between">
+        <a class="inline-block" href="#">
+          <img src="/pet_classifier.516a31e6.jpg" alt="Pet Classifier">
+        </a>
+        <div class="hidden sm:flex align-center gap-4">
+          <a target="_blank" rel="noopener" class="w-16 self-center" href="https://www.kaggle.com/carloseduardorm">
+            <img src="/kaggle.8eeeea80.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="self-center" href="https://github.com/CarlosERM">
+            <img src="/github.ea335e20.svg">
+          </a>
+          <a target="_blank" rel="noopener" class="self-center" href="https://www.linkedin.com/in/carloserm/">
+            <img src="/linkedin.47ae2b4b.svg">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="relative grow flex flex-col align-center">
+      <div id="loading-spinner" class="hidden flex self-center h-full">
+        <svg class="self-center mb-32 w-12 h-12 text-gray-300 animate-spin" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path d="M32 3C35.8083 3 39.5794 3.75011 43.0978 5.20749C46.6163 6.66488 49.8132 8.80101 52.5061 11.4939C55.199 14.1868 57.3351 17.3837 58.7925 20.9022C60.2499 24.4206 61 28.1917 61 32C61 35.8083 60.2499 39.5794 58.7925 43.0978C57.3351 46.6163 55.199 49.8132 52.5061 52.5061C49.8132 55.199 46.6163 57.3351 43.0978 58.7925C39.5794 60.2499 35.8083 61 32 61C28.1917 61 24.4206 60.2499 20.9022 58.7925C17.3837 57.3351 14.1868 55.199 11.4939 52.5061C8.801 49.8132 6.66487 46.6163 5.20749 43.0978C3.7501 39.5794 3 35.8083 3 32C3 28.1917 3.75011 24.4206 5.2075 20.9022C6.66489 17.3837 8.80101 14.1868 11.4939 11.4939C14.1868 8.80099 17.3838 6.66487 20.9022 5.20749C24.4206 3.7501 28.1917 3 32 3L32 3Z" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M32 3C36.5778 3 41.0906 4.08374 45.1692 6.16256C49.2477 8.24138 52.7762 11.2562 55.466 14.9605C58.1558 18.6647 59.9304 22.9531 60.6448 27.4748C61.3591 31.9965 60.9928 36.6232 59.5759 40.9762" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" class="text-c1"></path>
+        </svg>
+      </div>
+      <h2 id="pet_breed" class="hidden text-4xl text-center text-c1 font-semibold"></h2>
+      <form id="my-form" class="mt-4 w-80 sm:w-96 max-w-96 flex flex-col h-fit z-10 self-center">
+        <input id="input_photo" type="file" name="img" accept="image/*" hidden="">
+        <div class="group transition-all cursor-pointer ease-in-out outline-dashed outline-4 outline-c2 flex flex-col bg-c3 rounded-xl h-96 justify-center drop-shadow-lg hover:drop-shadow-2xl hover:outline-offset-8 hover:mb-2 bg-opacity-95" id="drop_zone">
+          <img id="upload_image" class="group/photo:hidden transition-all w-40 self-center align-center group-hover:-translate-y-1.5" src="/upload.be8f3e05.svg">
+          <h2 id="upload_title" class="group/photo:hidden transition-all text-center font-poppins font-bold text-lg text-c4 group-hover:text-c2 group-hover:text-xl">
+            Upload a Petcture
+          </h2>
+        </div>
+        <input id="predict-button" class="transition-all shadow-md cursor-pointer text-white text-2xl mt-5 py-3 px-20 font-poppins font-semibold bg-c1 hover:bg-[#FFA52B] hover:shadow-lg rounded-2xl hover:-translate-y-1" type="submit" value="Predict">
+      </form>
+      <img class="absolute bottom-0 left-0 w-96" src="/dog1.f33facf0.svg">
+      <img class="absolute bottom-0 right-0" src="/dog2.074a214c.svg">
+    </main>
+  </body>
+</html>

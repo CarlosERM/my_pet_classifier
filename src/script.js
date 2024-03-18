@@ -15,6 +15,7 @@ function addTitle(title) {
 }
 
 async function makePrediction(fl) {
+  if (!fl) return;
   try {
     loadingSpinner();
     let reader = new FileReader();
