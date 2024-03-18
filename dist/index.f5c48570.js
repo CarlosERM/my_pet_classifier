@@ -592,14 +592,21 @@ const image_zone = document.getElementById("drop_zone");
 const upload_image = document.getElementById("upload_image");
 const upload_title = document.getElementById("upload_title");
 let file;
+function addTitle(title) {
+    const h2_title = document.getElementById("pet_breed");
+    h2_title.innerHTML = title;
+}
 async function makePrediction(fl) {
     try {
-        const app = await (0, _client.client)("airvit2/pet_classifier");
-        const result = await app.predict("/predict", [
-            fl
-        ]);
-        console.log("Prediction successful");
-        console.log(result.data);
+        let reader = new FileReader();
+        reader.onloadend = async function() {
+            const app = await (0, _client.client)("airvit2/pet_classifier");
+            const result = await app.predict("/predict", [
+                reader.result
+            ]);
+            addTitle(result.data[0].label);
+        };
+        reader.readAsDataURL(fl);
     } catch (error) {
         console.log("An error occurred during prediction");
         console.error(error);
@@ -641,7 +648,6 @@ function dropHandler(e) {
     });
 }
 function dragOverHandler(e) {
-    console.log("File(s) in drop zone");
     e.preventDefault();
 }
 function handleImageSelect(e) {

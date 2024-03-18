@@ -12,7 +12,7 @@
   </head>
   <body class="h-full flex flex-col">
     <header>
-      <nav class="p-8 flex justify-between">
+      <nav class="px-8 pt-8 pb-2 flex justify-between">
         <a class="inline-block" href="#">
           <img src="/pet_classifier.516a31e6.jpg" alt="Pet Classifier">
         </a>
@@ -29,8 +29,9 @@
         </div>
       </nav>
     </header>
-    <main class="relative grow flex justify-center">
-      <form class="w-96 flex flex-col h-fit z-10">
+    <main class="relative grow flex flex-col align-center gap-4">
+      <h2 id="pet_breed" class="text-4xl text-center text-c1 font-semibold"></h2>
+      <form class="w-96 flex flex-col h-fit z-10 self-center">
         <input id="input_photo" type="file" name="img" accept="image/*" hidden="">
         <div class="group transition-all cursor-pointer ease-in-out outline-dashed outline-4 outline-c2 flex flex-col bg-c3 rounded-xl h-96 justify-center drop-shadow-lg hover:drop-shadow-2xl hover:outline-offset-8 hover:mb-2 bg-opacity-95" id="drop_zone">
           <img id="upload_image" class="group/photo:hidden transition-all w-40 self-center align-center group-hover:-translate-y-1.5" src="/upload.be8f3e05.svg">
